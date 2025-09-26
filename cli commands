@@ -1,0 +1,13 @@
+
+# # run docker with volume mount the local file into the container to override the copied file, so no need to rebuild the docker image, also use gcloud auth cli
+docker run \
+    --rm -v ~/.config/gcloud:/root/.config/gcloud \
+    -e GOOGLE_CLOUD_PROJECT="wired-epsilon-472120-j8" \
+    -e BUCKET="my-ny-taxi-data" \
+    -v $(pwd)/upload_data.py:/app/upload_data.py \
+    nyc-taxi-uploader
+
+# to connect and set quotas
+gcloud auth application-default set-quota-project wired-epsilon-472120-j8
+
+
