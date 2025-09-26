@@ -1,2 +1,2 @@
-# ny-taxi-data-uploader
-this is to upload data on gcs and bigquery
+# NYC-taxitrip-data-uploader
+To upload data to GCS and BigQuery
